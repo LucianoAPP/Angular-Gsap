@@ -1,0 +1,8 @@
+<div class="container w-full">
+  <audio #audioPlayer src="/assets/audio/song.mp3" preload="auto"></audio>
+  <button (click)="playAudio()" class="play-button">▶️</button>
+  <p #offscreenText id="offscreen-text" class="offscreen-text"></p>
+  <p #text id="text" class="text"></p> 
+  <svg #svg id="svg"></svg> 
+  <textarea hidden #input class="input" id="input" [formControl]="inputControl"></textarea> 
+</div>

@@ -1,0 +1,35 @@
+ 
+
+  <div class="loading-container">
+    <div class="loading relative flex flex-col items-center justify-center min-h-screen z-10 px-4 md:px-8">
+        
+<div class="min-h-screen  flex items-center justify-center">
+  <div class="loading relative flex flex-col items-center justify-center">
+  
+      <div class="heartBox shadow-lg rounded-xl bg-pink-400" [style.left.%]="heartLeft">
+          <div class="heart"></div>
+      </div>
+      
+      <div class="content-wrapper w-full max-w-md mx-auto flex flex-col items-center">
+          <div class="progress-container w-full">
+              <div class="progress-bar h-14 bg-white rounded-full border-3 border-gray-700 shadow-md overflow-hidden">
+                  <div class="progress h-full bg-gradient-to-r from-pink-400 to-red-400 transition-all duration-200 ease-in-out rounded-full"
+                       [style.width.%]="percentWidth">
+                  </div>
+                  <div class="percent absolute inset-0 flex items-center justify-center font-bold text-lg font-valentine w-full"
+                       [class.text-white]="count > 46">
+                      {{ percentComplete ? '¡Surprise loaded with love!' : count + '%' }}
+                  </div>
+              </div>
+          </div>
+
+          <div class="message-container mt-10 text-center w-full">
+              <p class="loading-message font-bold font-valentine text-2xl md:text-2xl text-pink-600 animate-fade-in break-words">
+                  {{ currentMessage }}
+              </p>
+          </div>
+      </div>
+  </div>
+</div>
+    </div>
+</div>

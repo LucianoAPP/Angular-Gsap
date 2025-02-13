@@ -1,0 +1,38 @@
+<div class="flex items-center justify-center h-screen">
+    <!-- Partículas de fondo -->
+    <div class="particles">
+        <div class="particle" *ngFor="let i of [].constructor(20)"></div>
+    </div>
+
+    <div class="envlope-wrapper"> 
+        <div class="envelope-glow"></div>
+        <div id="envelope" [class.open]="isOpen" [class.close]="!isOpen" (click)="openEnvelope()" [attr.aria-label]="isOpen ? 'Sobre abierto' : 'Click para abrir el sobre'">
+            <div class="flap"></div>
+            <div class="pocket"></div>
+            <div class="letter">
+                <div class="words line1"></div>
+                <div class="words line2"></div>
+                <div class="words line3"></div>
+                <div class="words line4"></div>
+            </div>
+            <div class="hearts">
+                <div class="heart a1"></div>
+                <div class="heart a2"></div>
+                <div class="heart a3"></div>
+                <div class="heart a4"></div>
+                <div class="heart a5"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Botones para abrir y resetear -->
+<!-- <div class="reset">
+    <button (click)="openEnvelope()">Open</button>
+    <button (click)="resetEnvelope()">Reset</button>
+</div> -->
+
+<!-- <app-cards></app-cards>
+<app-scroll-text></app-scroll-text>
+<app-timeline></app-timeline> -->
+<!-- 
+<app-typing-effect></app-typing-effect> -->

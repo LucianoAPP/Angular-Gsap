@@ -1,0 +1,15 @@
+.text-container {
+  height: 200vh; /* Altura extendida para el scroll */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; /* Espacio entre palabras */
+  justify-content: center;
+  align-items: center;
+}
+
+.letter {
+  display: inline-block;
+  opacity: 0; /* Oculto al inicio */
+  transform: translateX(0); /* Posición controlada por GSAP */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}

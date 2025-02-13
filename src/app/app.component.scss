@@ -1,0 +1,71 @@
+/* Loader Animation */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.loader .animate-bounce {
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+.loader .delay-150 {
+  animation-delay: 0.15s;
+}
+
+.loader .delay-300 {
+  animation-delay: 0.3s;
+}
+
+/* Carta */
+.card-container {
+  perspective: 1000px;
+}
+
+.card-inner {
+  transform-style: preserve-3d;
+  transition: transform 1s ease;
+}
+
+.card-inner:hover {
+  transform: rotateY(5deg);
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.5s;
+}
+
+::view-transition-old(root) {
+  animation: fade-out 0.5s ease-out;
+}
+
+::view-transition-new(root) {
+  animation: fade-in 0.5s ease-in;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
